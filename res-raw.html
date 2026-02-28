@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Le 23 - Reservations</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0e3a85",secondary: "#D4AF37","background-light": "#F9F7F2","background-dark": "#1a1a1a","surface-light": "#ffffff",
+                        "surface-dark": "#2d2d2d",
+                        "text-light": "#333333",
+                        "text-dark": "#e5e5e5",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Montserrat", "sans-serif"],
+                        script: ["Great Vibes", "cursive"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-body antialiased transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm border-b border-secondary/20 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-20">
+<div class="flex-shrink-0 flex items-center gap-3">
+<span class="font-display font-bold text-2xl text-primary dark:text-white tracking-widest uppercase">Restaurant</span>
+<span class="font-script text-4xl text-primary dark:text-secondary -mt-2">Le 23</span>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-secondary transition-colors uppercase text-sm tracking-wider font-medium" href="#">Menu</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-secondary transition-colors uppercase text-sm tracking-wider font-medium border-b-2 border-primary dark:border-secondary" href="#">Reservations</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-secondary transition-colors uppercase text-sm tracking-wider font-medium" href="#">About Us</a>
+<a class="text-text-light dark:text-text-dark hover:text-primary dark:hover:text-secondary transition-colors uppercase text-sm tracking-wider font-medium" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors" id="theme-toggle">
+<span class="material-icons text-primary dark:text-secondary text-xl">brightness_4</span>
+</button>
+<a class="p-2 relative" href="#">
+<span class="material-icons text-primary dark:text-secondary">shopping_bag</span>
+<span class="absolute top-1 right-0 bg-secondary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center">0</span>
+</a>
+</div>
+</div>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-7 space-y-8">
+<div class="text-center lg:text-left mb-8">
+<h1 class="font-display text-4xl md:text-5xl text-primary dark:text-white mb-4">Book Your Experience</h1>
+<p class="text-gray-600 dark:text-gray-400 font-light">Experience the finest traditional Algerian cuisine in an elegant setting.</p>
+</div>
+<div class="flex justify-center lg:justify-start mb-8">
+<div class="bg-gray-200 dark:bg-gray-700 p-1 rounded-full inline-flex relative shadow-inner">
+<div class="w-1/2 h-full absolute bg-primary dark:bg-secondary rounded-full transition-all duration-300 left-0" id="toggle-bg"></div>
+<button class="relative z-10 px-8 py-2 text-sm font-medium uppercase tracking-wider text-white dark:text-gray-900 rounded-full transition-colors" onclick="toggleMode('delivery')">Delivery</button>
+<button class="relative z-10 px-8 py-2 text-sm font-medium uppercase tracking-wider text-gray-500 dark:text-gray-300 rounded-full transition-colors" onclick="toggleMode('reservation')">Reservation</button>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark shadow-xl rounded-lg p-8 border border-secondary/30 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full -mr-16 -mt-16 pointer-events-none"></div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary">Select Date</label>
+<div class="relative">
+<input class="w-full bg-transparent border-b border-secondary/50 focus:border-primary dark:focus:border-secondary focus:ring-0 text-text-light dark:text-text-dark px-0 py-2 placeholder-gray-400" type="date"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary">Select Time</label>
+<select class="w-full bg-transparent border-b border-secondary/50 focus:border-primary dark:focus:border-secondary focus:ring-0 text-text-light dark:text-text-dark px-0 py-2">
+<option>18:00</option>
+<option>18:30</option>
+<option>19:00</option>
+<option>19:30</option>
+<option>20:00</option>
+<option>20:30</option>
+<option>21:00</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary">Party Size</label>
+<div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide">
+<button class="w-10 h-10 rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all flex items-center justify-center flex-shrink-0" type="button">1</button>
+<button class="w-10 h-10 rounded-full bg-primary text-white border border-primary flex items-center justify-center flex-shrink-0 shadow-lg" type="button">2</button>
+<button class="w-10 h-10 rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all flex items-center justify-center flex-shrink-0" type="button">3</button>
+<button class="w-10 h-10 rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all flex items-center justify-center flex-shrink-0" type="button">4</button>
+<button class="w-10 h-10 rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all flex items-center justify-center flex-shrink-0" type="button">5</button>
+<button class="w-10 h-10 rounded-full border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all flex items-center justify-center flex-shrink-0" type="button">6+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary">Name</label>
+<input class="w-full bg-transparent border-b border-secondary/50 focus:border-primary dark:focus:border-secondary focus:ring-0 text-text-light dark:text-text-dark px-0 py-2 placeholder-gray-400 dark:placeholder-gray-600" placeholder="Your full name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary">Phone</label>
+<input class="w-full bg-transparent border-b border-secondary/50 focus:border-primary dark:focus:border-secondary focus:ring-0 text-text-light dark:text-text-dark px-0 py-2 placeholder-gray-400 dark:placeholder-gray-600" placeholder="+213 XX XX XX XX" type="tel"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-xs font-bold uppercase tracking-widest text-primary dark:text-secondary">Special Requests</label>
+<textarea class="w-full bg-transparent border-b border-secondary/50 focus:border-primary dark:focus:border-secondary focus:ring-0 text-text-light dark:text-text-dark px-0 py-2 placeholder-gray-400 dark:placeholder-gray-600 resize-none" placeholder="Allergies, special occasion, etc." rows="2"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-secondary hover:bg-yellow-600 text-white font-display font-bold text-lg py-4 rounded shadow-lg transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-widest" type="button">
+                                Book Your Table
+                            </button>
+<p class="text-center text-xs text-gray-500 mt-4 italic">Confirmation will be sent via SMS within 15 minutes.</p>
+</div>
+</form>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-8">
+<div class="relative h-64 md:h-80 rounded-lg overflow-hidden group shadow-xl">
+<img alt="Traditional Algerian Tagine" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChv8K2uFEtnznPSNCK7q0lGB_HDdlolcN8lz5mxoEp4mFrbNxhWl3voJx8pbd1RFQbYcN6OpnT5uAa5SUDJGiv6A-NeMQDc8V9uMlP3NZjGr2gnxd62qgjOCrQz5g6hKC2ESVV9gNMeVpHrhcJQ4vym5OQht6A1ppYoPn9p0e-RjY0bqqMDGqxhc974U7gm-flrvvClt-ZhkYHwmoS4oNuBFdsLf-0ai_PTKw1XIRA6fFSIQy8JDjm0i_dJUekaDL_hKD4TInCXvc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6">
+<span class="text-secondary font-script text-2xl mb-1">Chef's Special</span>
+<h3 class="text-white font-display text-2xl">Lamb Tagine with Prunes</h3>
+</div>
+</div>
+<div class="bg-surface-light dark:bg-surface-dark border-t-4 border-primary dark:border-secondary p-6 shadow-lg rounded-b-lg">
+<div class="flex items-center justify-between mb-6">
+<div class="flex items-center gap-2">
+<span class="material-icons text-primary dark:text-secondary">camera_alt</span>
+<h3 class="font-display font-bold text-xl text-primary dark:text-white">@RestaurantLe23</h3>
+</div>
+<a class="text-xs font-bold text-secondary uppercase tracking-widest hover:text-primary dark:hover:text-white transition-colors" href="#">Follow Us</a>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Gourmet Pizza" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjXw57dwPy-RIqQ5WoHekCa9j2h6s4C1bW-qPKF2FDLEXchSLpvEtu0FYNAS5rZxvoZx2RHjhPWxDeW0HRFy2zzf-hHl2YcsEOtva8v7oCTEfFPsXrNY7kHLSKWJbBFHa67PmmUoLtQ5QfFXmGLyE5cwwQX5HPckGllrXyM-DzkZNSF7ydhPs5LnDLJtMFp0GiX9Txh3krs4RTQSzn2hiX5be2aqJX4sAi-9E4dhY9EL2mshhUJZyut_QNKY0Vfe16ZBz_aXVo3Hg"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Grilled skewers" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-9rhmLZPrsGgpzOIW_E74HqeQ42heOCe1OuIfpBr70-jVM6Ihj9MA6dcsaGZ9ENSrJXomPKbBfTBEZdxSb_V8_Cl30wTBtc4WcgpaLNgAezU9C4KaCrviQ5qF_zpYchnsZMzWDBSL5bpEdMloaLj9-G34nvBbX5rxCcbT6lzIRvRq0Yyn0x3dvnSSm9fnQMc3Bhvjcip8k_WxmI7YJ9dcBYqp_5Tj48pMeGet-253MW00dtwF4F5rhIme1bqW-ulTmZIXj3xSZSo"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Couscous dish" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8rdLw9U_uOlHlAVmd6f4c36xDFj0_AA2nz8lBoLxqK_MMoJ6sDDp4tO8r9n5cmy8QbZVXVJ30VOq2Zg3wtVp6m6AVtPfy40Mz4kPb8x0BE97WMsOboDkM2QtT7dNV34wxl2oLlfpc4ELdeHAdHGBfQPwbuVSPFcyRI7Psavn746wN-zPBNO6WWJx_nuD_rBiY-WvIswgBzDO8Ok8lEGS35MOcqLMxbgg9cdC3jHPxgwf172u73l56VG5fyqZRCHmCfr1mic9pIwQ"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Fresh Salad" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkSXVxdntaw8LPfZCrBQ6x0rDDT54jzzMJ75oSFQ_d0YgL0rdp7UyQ1RN8PnkWYewJsnVZOP6i2rdW8Ryc6ZwKnWglfuJMe5MwOCq2vM-JjmRjLl_t1UU_KuLF5w5OAMvokgogouYFAKYhMQjGcfhTWxASPQIbthgLj1medbkRDTd1nyKCLTDOY9RajnfBZptFvAQyqwv2X31xOl_RFEHHBE-ukFKTkJudADaUjoBpRn9I5k-1cpNTRqbnNv_0KCF8nWxBxTcbA_k"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Cocktail drink" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEEJoMAfaLZOYqSkEQRsbGJGaMAkJI_de-Kny1LLOwuNs0wg6A4T-N71fKW17dXsifcODrGWVLn1uZEZsEiRhSSbGzmDpbiFlO10BnisuD4OLGYIHCIpXvybk06DJzBLC2EfQSAaN1uOD5FE1iEppAx1sqWyruzt3yWTGzs0syWQDec9AXC5unMBsgsuCHsgMM9IGxpPOJmnwdrPwh1-fkqAa1Xd3VUqzQd8l_K6BO4n_LCJPzi-mJ3blqjLlBC1FKhe859_OJjww"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Appetizer platter" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6LOW7fhl-T28ibmAgU7caQYnPzsYw2b3c_rvnZQ7jYLShAQ8UOE_O8rox0emDKM5LeVsdadKZZjUcWW2x70xdUfhkvkcYIs93eRwSW5rt7yVkiFXfh7BHYHKutXnDCNgWG_B2Z8iXyZJ5bU0JsHv7aQOoH3iVxwN3dwY5mLN7lQJ1dqA1uw4TGJkdQThRwOQZsa8RkN5aEEX3xUFKPOShbNs-Rz5CDpoZJiIGTRiSoKSM8faHP7muNsjgyqtsyvq16iqzOG0OVzs"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Dessert with mint" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhBGXUEI4ep-McKvNT7joiidlJ8r7CwDiL8f8Dox6wlkwYEaNmTIVIj9iBwV7VuUqHkBnUoLudJ0aio1qy2TBK6i9o5BRdq-qCEsTsHD-GKRkdsXhryEwwHnyDXKXpmiZ6ko4FDupLC4QasY3tEZcQM7xLMsLU8MxxRZPBTWx6R6uRwg77EBy5XqavoETdgL7qmEPLQfVGxc60dqcE4VadZAcUA1QoDEc8-KDF4pDJdQTGfEybUC3qU6h4lDUITMRcGtd-ybBNXAU"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Restaurant Interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATqloIBc1wnM3VyZKPjvDtAqjL9_4wY0bHkD-juNRfBTU5H91E0WcbZBGYYnIP6EC1aGOyF0VJJjrM7RmH4OoEzKlsRk_sxEGekbn-71I2PHsUNVrPIF1zqjnxNejFi-ThB3u-AzF0-6LNwp7Rrw7Wa2H0NjxHtuqoicBEtSAh64NywnD0fu0J51tY0ivwzFQOdUS3jfHPQQD_st-zrZL3E7IbfDEkdR-sRTLZn39DGP-wDdZA_J1DV6xDeSswnf_YK1Y_MAMcBuM"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+<div class="aspect-square bg-gray-200 overflow-hidden relative group cursor-pointer">
+<img alt="Fine Dining Plating" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCV-7NV4vncxyxFvyU51ndqnlnalGYq0seD6K_S4bUebVSJbP6qiq34w5hegTIAQl6cQ8flYQWpJdhGsoFLDVmZNleIFHfKfhi6rNblYgHaqyfqhQBzInAmD8HTeqE5w3vgrtat3MTYj6fNqICvbdbb9M0uK2bnvJgDHSNhq1_MqwxEYFseQhYQE_Z21eANiUzuVzCpuT8LJl0b542zBO9YgO_cCvD_or_kbnzkbKud9DgTuqFnKY2GBx6tJ9PdEbUkX3gOmD5c2A"/>
+<div class="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+<span class="material-icons text-white">favorite</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-primary text-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-4">
+<div class="bg-secondary p-3 rounded-full text-primary">
+<span class="material-icons">location_on</span>
+</div>
+<div>
+<h4 class="font-display font-bold text-lg">Visit Us</h4>
+<p class="text-sm opacity-80 font-light">123 Rue de la Liberté, Algiers</p>
+</div>
+</div>
+<button class="text-sm border border-white/30 hover:bg-white hover:text-primary px-4 py-2 rounded transition-colors uppercase tracking-wider">
+                        Get Directions
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 py-12 mt-12">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<span class="font-display font-bold text-xl text-primary dark:text-white tracking-widest uppercase block mb-2">Restaurant</span>
+<span class="font-script text-3xl text-primary dark:text-secondary block mb-6">Le 23</span>
+<div class="flex justify-center space-x-6 mb-8">
+<a class="text-gray-400 hover:text-primary dark:hover:text-secondary" href="#"><span class="sr-only">Facebook</span>FB</a>
+<a class="text-gray-400 hover:text-primary dark:hover:text-secondary" href="#"><span class="sr-only">Instagram</span>IG</a>
+<a class="text-gray-400 hover:text-primary dark:hover:text-secondary" href="#"><span class="sr-only">Twitter</span>TW</a>
+</div>
+<p class="text-gray-500 text-sm">© 2023 Le 23 Restaurant. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        // Check local storage or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        themeToggleBtn.addEventListener('click', function() {
+            document.documentElement.classList.toggle('dark');
+            if (document.documentElement.classList.contains('dark')) {
+                localStorage.theme = 'dark';
+            } else {
+                localStorage.theme = 'light';
+            }
+        });
+        function toggleMode(mode) {
+            // This is a visual-only toggle for the demo
+            // Real implementation would swap form content
+            const toggleBg = document.getElementById('toggle-bg');
+            if(mode === 'delivery') {
+                toggleBg.style.transform = 'translateX(0%)';
+            } else {
+                toggleBg.style.transform = 'translateX(100%)';
+            }
+        }
+    </script>
+
+</body></html>

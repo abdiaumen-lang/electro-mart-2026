@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Le 23 - Our Story</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#003399", // Deep Royal Blue from logo
+                        secondary: "#D4AF37", // Gold
+                        emerald: "#046307", // Deep Emerald Green
+                        "background-light": "#FAFAF5", // Warm off-white
+                        "background-dark": "#0F172A", // Deep slate for dark mode
+                        "paper-light": "#FFFFFF",
+                        "paper-dark": "#1E293B",
+                    },
+                    fontFamily: {
+                        display: ["'Playfair Display'", "serif"],
+                        body: ["'Lato'", "sans-serif"],
+                        script: ["'Great Vibes'", "cursive"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        .gold-accent {
+            background: linear-gradient(45deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .pattern-overlay {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4AF37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 transition-colors duration-300 font-body">
+<nav class="fixed w-full z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-emerald/10 dark:border-emerald/30">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-24">
+<div class="flex-shrink-0 flex items-center">
+<div class="text-center">
+<span class="block text-primary text-xs tracking-[0.3em] font-bold uppercase mb-[-5px]">Restaurant</span>
+<span class="font-script text-primary text-5xl">Le 23</span>
+</div>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-slate-800 dark:text-slate-200 hover:text-primary dark:hover:text-secondary transition-colors uppercase tracking-widest text-xs font-bold" href="#">Home</a>
+<a class="text-primary dark:text-secondary uppercase tracking-widest text-xs font-bold border-b-2 border-primary dark:border-secondary pb-1" href="#">Our Story</a>
+<a class="text-slate-800 dark:text-slate-200 hover:text-primary dark:hover:text-secondary transition-colors uppercase tracking-widest text-xs font-bold" href="#">Menu</a>
+<a class="text-slate-800 dark:text-slate-200 hover:text-primary dark:hover:text-secondary transition-colors uppercase tracking-widest text-xs font-bold" href="#">Reservations</a>
+<button class="bg-primary text-white px-6 py-2 rounded-sm hover:bg-emerald transition-colors duration-300 uppercase text-xs tracking-widest font-bold">Book a Table</button>
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-symbols-outlined text-slate-600 dark:text-slate-300 text-sm">light_mode</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full pattern-overlay z-0 pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 relative z-10">
+<div class="text-center mb-16 lg:mb-24">
+<div class="inline-block relative">
+<span class="text-secondary font-script text-3xl lg:text-4xl block mb-2">Heritage &amp; Passion</span>
+<h1 class="text-5xl lg:text-7xl font-display font-medium text-primary dark:text-white mb-6">Our Story</h1>
+<div class="h-1 w-24 bg-emerald mx-auto rounded-full"></div>
+</div>
+<p class="mt-8 max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-light">
+                    A journey through taste, memory, and the vibrant soul of Algeria, served on a plate in the heart of the city.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+<div class="relative group">
+<div class="absolute inset-0 border-2 border-emerald dark:border-emerald/50 transform translate-x-4 translate-y-4 rounded-sm transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2 z-0"></div>
+<div class="absolute -inset-4 border border-secondary/30 rounded-sm transform -rotate-1 z-0"></div>
+<div class="relative rounded-sm overflow-hidden shadow-2xl aspect-[4/5] z-10">
+<img alt="Traditional warm kitchen scene with hands preparing dough on a wooden table" class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105 filter sepia-[0.2]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2hlN7SkUIW3dF2r1RpRr1zcsie0OSPLIhfc7-0W5xjJ1DzM6RxtF4ErKWkkOpp8Ed9LJNXbFpjLu4Mcgq6_evBkmqWVvAZyFkuFDV-9FFUDxMUW41wktcXDRvVJFsi5ywHtcbSpIEIUNYsfhLj5zSYYQpmN01bB0kPJilE8wvLkkzt5RZ-13vYWNu54EHUmm0ozmHOUsAC6VU3A42ikJdij7zdG9amL31EwI5Q3qjyI3MfZ0JccWvhX8pBDmNK4R61giXINJzHvA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 text-white">
+<span class="block font-script text-2xl text-secondary mb-1">Since 1985</span>
+<span class="uppercase tracking-widest text-xs font-bold opacity-90">The Art of Traditional Cooking</span>
+</div>
+</div>
+<div class="absolute -top-6 -right-6 bg-paper-light dark:bg-paper-dark p-4 rounded-full shadow-lg border border-secondary/20 z-20 w-24 h-24 flex items-center justify-center flex-col animate-bounce-slow">
+<span class="text-primary font-bold text-2xl block">23</span>
+<span class="text-[0.6rem] uppercase tracking-wider text-slate-500 dark:text-slate-400 text-center leading-tight">Secret<br/>Spices</span>
+</div>
+</div>
+<div class="lg:pl-8 space-y-8">
+<div class="border-l-4 border-secondary pl-6 py-2">
+<h2 class="text-3xl lg:text-4xl font-display text-slate-800 dark:text-slate-100 mb-2">
+                            From Algiers with <span class="italic text-primary font-serif">Love</span>
+</h2>
+</div>
+<div class="prose prose-lg text-slate-600 dark:text-slate-300 font-light leading-relaxed">
+<p class="first-letter:text-5xl first-letter:font-display first-letter:text-emerald first-letter:float-left first-letter:mr-3 first-letter:mt-[-10px]">
+                            It began in a small, sun-drenched kitchen in the Casbah of Algiers. Here, amidst the aroma of roasting cumin and simmering chorba, the seeds of <strong class="text-primary font-medium">Le 23</strong> were sown. Not in a business plan, but in a grandmother's tattered notebook, filled with recipes passed down like precious heirlooms.
+                        </p>
+<p>
+                            We believe that food is more than sustenance; it is a storyteller. Every tagine we serve carries the whisper of olive groves, the heat of the Sahara, and the gentle breeze of the Mediterranean. Our chefs honor these traditions, using techniques that have remained unchanged for centuries.
+                        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
+<div class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-emerald text-2xl mt-1">eco</span>
+<div>
+<h3 class="font-display text-lg text-slate-800 dark:text-white mb-1">Authentic Ingredients</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Sourced directly from local farmers and Algerian markets.</p>
+</div>
+</div>
+<div class="flex items-start space-x-3">
+<span class="material-symbols-outlined text-emerald text-2xl mt-1">restaurant</span>
+<div>
+<h3 class="font-display text-lg text-slate-800 dark:text-white mb-1">Generational Recipes</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Preserved secrets from our family archives.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-slate-200 dark:border-slate-700">
+<blockquote class="italic text-slate-500 dark:text-slate-400 font-display text-lg">
+                            "To dine at Le 23 is to be welcomed into our home. We don't just serve customers; we host guests."
+                        </blockquote>
+<div class="mt-4 flex items-center">
+<img alt="Chef Portrait" class="w-12 h-12 rounded-full object-cover border-2 border-secondary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABnkehHjqX-P3dCKH6MKEbDcxCj8cPci7tBUSpvUkrnLbwTZ0tz1RIeEW6iIgt-J4oWYzCCFmdsokFhmBegIkAMDBmB0M-YBoIqO-Zekdi0qYve-7cbwgW6i7bkK7GS1aItt4bloF3mrVF-R6RaSCSZXHOneiWAg92bO6rS7--UHYLbD3Hxhp25uehuEIJtC1BQPlVr78zuNmgH3mPGSw6n0pL2IKCQxPMZwH5J_U7oqUtk7rHOKFLC48d0VLl5aNWFaGHhbE08rs"/>
+<div class="ml-3">
+<span class="block text-sm font-bold text-slate-800 dark:text-white uppercase tracking-wider">Amine &amp; Sarah</span>
+<span class="block text-xs text-primary font-medium">Founders</span>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<button class="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-secondary dark:text-secondary dark:hover:bg-secondary dark:hover:text-slate-900 transition-all duration-300 px-8 py-3 rounded-sm uppercase tracking-widest text-xs font-bold">
+                            Explore Our Menu
+                        </button>
+</div>
+</div>
+</div>
+<div class="mt-24 mb-16 relative h-64 rounded-sm overflow-hidden flex items-center justify-center">
+<img alt="Abstract close up of spices and textures" class="absolute inset-0 w-full h-full object-cover filter brightness-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA56VRIMMI0GF-sR0Zu9KvHnT61qeZywPhAZVWS1X-SxihgOwt9td4_orYquC7VBkKN7NoGFotQ0qAPREn_kULsdRm9tL-khbRCnPxYkt0lC0-I0eL7VsO4ndlog9PsiASn2uqQ7JnrQ1oFkaFjNbKXAxWaXH-APXkdkV42zKAOIPpGLbrbNJIpfLeUplElf4-seVRWrfNHWWdU8VwgoB4Ugn6uAqTWTXcecfahnfSkTCia2AyqVgsym4oGAXgD6qTPJ70wCsTbBTU"/>
+<div class="relative z-10 text-center px-4">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4">star</span>
+<h3 class="text-3xl md:text-4xl font-display text-white italic mb-2">"A Culinary Masterpiece"</h3>
+<p class="text-slate-300 uppercase tracking-widest text-xs font-bold">— The Gastronomy Review</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-primary text-white py-12 border-t-4 border-secondary">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+<div>
+<h4 class="font-display text-2xl mb-4">Le 23</h4>
+<p class="text-slate-300 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                    Experience the timeless elegance of Algerian cuisine. Where every dish tells a story.
+                </p>
+</div>
+<div class="flex flex-col items-center justify-center">
+<div class="flex space-x-4 mb-4">
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">camera_alt</span>
+</a>
+</div>
+<p class="text-xs text-slate-400 uppercase tracking-widest">© 2023 Le 23 Restaurant</p>
+</div>
+<div class="md:text-right">
+<h4 class="font-display text-xl mb-4">Contact</h4>
+<p class="text-slate-300 text-sm mb-1">123 Rue de la Liberté</p>
+<p class="text-slate-300 text-sm mb-1">Algiers, Algeria</p>
+<p class="text-secondary text-sm mt-2 font-bold">+213 21 23 45 67</p>
+</div>
+</div>
+</footer>
+
+</body></html>

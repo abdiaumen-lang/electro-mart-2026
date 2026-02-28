@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Le 23 - Digital Menu &amp; Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0e3481", // Deep blue from the logo
+              secondary: "#c5a059", // Gold for buttons/accents
+              "background-light": "#fdfbf7", // Warm off-white
+              "background-dark": "#0f172a", // Dark slate/navy for dark mode
+              "surface-light": "#ffffff",
+              "surface-dark": "#1e293b",
+            },
+            fontFamily: {
+              display: ["Playfair Display", "serif"],
+              body: ["Lato", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+            },
+          },
+        },
+      };
+    </script>
+<style>
+        .font-script {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 font-body transition-colors duration-300">
+<nav class="fixed top-0 w-full z-50 bg-surface-light/95 dark:bg-surface-dark/95 backdrop-blur-md shadow-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-300">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-24">
+<div class="flex-shrink-0 flex items-center gap-4">
+<div class="flex flex-col items-center">
+<span class="text-xs tracking-[0.2em] font-bold text-primary dark:text-blue-300 uppercase">Restaurant</span>
+<span class="font-display italic text-4xl text-primary dark:text-blue-300 font-bold leading-none">Le 23</span>
+</div>
+</div>
+<div class="hidden md:flex space-x-8 items-center">
+<a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary transition-colors uppercase tracking-wide" href="#">Menu</a>
+<a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary transition-colors uppercase tracking-wide" href="#">Reservations</a>
+<a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary transition-colors uppercase tracking-wide" href="#">About Us</a>
+<a class="text-sm font-medium hover:text-secondary dark:hover:text-secondary transition-colors uppercase tracking-wide" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-gray-600 dark:text-gray-300 hover:text-secondary transition-colors">
+<span class="material-icons">search</span>
+</button>
+<button class="text-gray-600 dark:text-gray-300 hover:text-secondary transition-colors relative">
+<span class="material-icons">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">2</span>
+</button>
+<button class="text-gray-600 dark:text-gray-300 hover:text-secondary transition-colors" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons dark:hidden">dark_mode</span>
+<span class="material-icons hidden dark:block">light_mode</span>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="pt-32 pb-12 md:pt-40 md:pb-20 bg-background-light dark:bg-background-dark">
+<div class="max-w-7xl mx-auto px-4 text-center">
+<h1 class="font-display text-5xl md:text-6xl text-primary dark:text-white mb-4 font-medium">
+                Taste of Algeria
+            </h1>
+<p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto font-light italic font-display">
+                Authentic flavors, refined presentation. Experience the culinary heritage of Algiers.
+            </p>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+<div class="flex flex-col lg:flex-row gap-12">
+<aside class="w-full lg:w-64 flex-shrink-0">
+<div class="sticky top-32 bg-surface-light dark:bg-surface-dark p-6 rounded-lg shadow-sm border border-gray-100 dark:border-gray-800">
+<h3 class="font-display text-2xl text-primary dark:text-white mb-6 border-b border-secondary pb-2 inline-block">Menu</h3>
+<ul class="space-y-4">
+<li>
+<a class="flex justify-between items-center group text-secondary font-bold" href="#">
+<span>Starters</span>
+<span class="material-icons text-sm opacity-100 transition-opacity">chevron_right</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center group text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">
+<span>Traditional Mains</span>
+<span class="material-icons text-sm opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center group text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">
+<span>Grills &amp; Roasts</span>
+<span class="material-icons text-sm opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center group text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">
+<span>Desserts</span>
+<span class="material-icons text-sm opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+</li>
+<li>
+<a class="flex justify-between items-center group text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">
+<span>Beverages</span>
+<span class="material-icons text-sm opacity-0 group-hover:opacity-100 transition-opacity">chevron_right</span>
+</a>
+</li>
+</ul>
+<div class="mt-10 p-4 bg-background-light dark:bg-slate-800 rounded border border-secondary/20">
+<p class="text-sm text-gray-500 dark:text-gray-400 italic text-center">"Every dish tells a story of tradition."</p>
+</div>
+</div>
+</aside>
+<div class="flex-1">
+<div class="flex justify-between items-end mb-8 border-b border-gray-200 dark:border-gray-700 pb-4">
+<div>
+<h2 class="font-display text-3xl text-gray-900 dark:text-white">Starters &amp; Appetizers</h2>
+<p class="text-sm text-gray-500 dark:text-gray-400 mt-1">Les Entrées</p>
+</div>
+<div class="hidden sm:block text-sm text-gray-500 dark:text-gray-400">
+                        Showing 6 results
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800">
+<div class="relative h-64 overflow-hidden">
+<img alt="Traditional Chorba Soup" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB72KQeYk3QE53VLLKpGb4Z_iYFpvSsvruqzAjrihEkPduzt5qBauP5fEJZtfN-VRyOGmkGV_DtPod3w5s2d8mjTYXLo_U1LI3dUmShhftQczM4N2i0aY1soaewcDe1EZZ3VN93au6aa2v-dfQsvWtzP3-FUsAQjVlpjGTT1FxfCLT3Jynu9f64M2cJJobURmCXcvYg2Sxobu_c6D8eQiVJf-GvauX_WMYhZEDH18R13-7wdMIvvchN1BsdyQcDuHJuzQ7dAV31eCo"/>
+<div class="absolute top-4 right-4 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary tracking-wider uppercase">
+                                Best Seller
+                            </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white group-hover:text-secondary transition-colors">Chorba Frik</h3>
+<span class="font-display text-lg font-bold text-secondary">$12.00</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-2">
+                                Traditional Algerian soup made with crushed green wheat (Frik), lamb, chickpeas, and fresh coriander. Served with homemade bread.
+                            </p>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs text-gray-400 font-medium">Takes 15 min</span>
+<button class="bg-primary text-white hover:bg-secondary px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2">
+<span>Order Now</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800">
+<div class="relative h-64 overflow-hidden">
+<img alt="Plate of Bourek" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlWm6N5h0bde-sXhyw6TU-4-o_PD1rV5KrDqmbIrNH92_3OUxpa2eGP9tsjy1GXLFSkMmYE6lcLmqBQvHjqvBzW8NrFJYYSmaAd_BZxmKXO324Ip1Tu7qesv5RRrk7Hge85WB-jasxDdVr47ZPdFRMLdAFdmkdk7dyX3XDCSq1X5Pkr9RMRm9k70goEpJBdgPs-SRfy3JdXveY2rnFoiy34cCFjCcDDb-HSf6-fxT8w9vcYf1Rf4motLdShu8puUk0f1QYFylxcKI"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white group-hover:text-secondary transition-colors">Bourek Laadjine</h3>
+<span class="font-display text-lg font-bold text-secondary">$9.50</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-2">
+                                Crispy homemade pastry rolls stuffed with seasoned minced meat, parsley, onions, and cheese. A crunchy delight.
+                            </p>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs text-gray-400 font-medium">3 Pieces</span>
+<button class="bg-primary text-white hover:bg-secondary px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2">
+<span>Order Now</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800">
+<div class="relative h-64 overflow-hidden">
+<img alt="Mechoui Lamb" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz3ddJEgl_PQWpz2JZSa4oFaaUKjrmTnQBv6UDIVAADDWlzZmfpFQ-RzU1WukPwFI4ayroFl-8R0bad2yGNMBJ4CZ0MUUaImwcgExX0Z9E_GaKrrY1P4qViF2S-Nr0Mogn05v8NvUY6zxNZdFmQccnerYjhl2ZyRoU92ZFbPtnhgqkoQnXfzFM6vd-ukkWpRVOBig-2dAKL0b-kgK1qRiDh2qEJfAM1hYpciWLr40frdD7Tm9LoLyHvgfjzBufLVVxbXOM-A9KToI"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white group-hover:text-secondary transition-colors">Mechoui</h3>
+<span class="font-display text-lg font-bold text-secondary">$34.00</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-2">
+                                Slow-roasted leg of lamb marinated in North African spices, served tender with roasted vegetables and couscous.
+                            </p>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs text-gray-400 font-medium">Shareable</span>
+<button class="bg-primary text-white hover:bg-secondary px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2">
+<span>Order Now</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800">
+<div class="relative h-64 overflow-hidden">
+<img alt="Couscous Royal" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-qEPBPirL8zaXfdjwAlZuqq7Il59i4h36VyAjlwv1FuBjvn0CfYFHFd6Y-NcE0Q5TYWEWX7vCpRARnc3C7a8_7nJORYXUM8pMLlmRim0-7svxa9AQ82xR_HMhkDRbAzDsiBFkvMKlKKH-TuItlv5XeVBePWoilL_oble-oCMThXdW1HXwW7MMrGcFPu0K1HIyd8U4IxCW8tkIxuiJAmLfhza8mJQzHNNCaGksgZVO7GPkAWjCscLmF90jYp0kSeniSek4ZV04eEs"/>
+<div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase">
+                                Chef's Choice
+                            </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white group-hover:text-secondary transition-colors">Couscous Royal</h3>
+<span class="font-display text-lg font-bold text-secondary">$28.00</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-2">
+                                Fluffy steamed semolina grains served with lamb, chicken, merguez sausage, and seven garden vegetables in a rich broth.
+                            </p>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs text-gray-400 font-medium">Takes 25 min</span>
+<button class="bg-primary text-white hover:bg-secondary px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2">
+<span>Order Now</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800">
+<div class="relative h-64 overflow-hidden">
+<img alt="Baklawa" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmF-8QKy-ioRQrlLpwTPiQpttDG4xbrW8PeyUBE0-9mMaSBMuUhhtYesayD52U8Yrbl-5Nk429Z2bulFIXL1NsXscVVyqaY42mNcHS7DIwslAaziT1yh3CsWqDokqPlkgPi-kBzBYN3w4he3RQY65SuG8asxWgNYgeyx6UwM0Muvwj3zjscxDlLeIk4aqO8JmG6frNkzwcf4osH_mXURpo3tqbDLM32Zt6T-AAYFDaR-w4mexbPMSY7B19XOR6vVo4V7cP2AIA5zA"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white group-hover:text-secondary transition-colors">Baklawa</h3>
+<span class="font-display text-lg font-bold text-secondary">$8.00</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-2">
+                                Layers of thin phyllo dough filled with chopped almonds and walnuts, sweetened and held together with pure honey syrup.
+                            </p>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs text-gray-400 font-medium">Sweet</span>
+<button class="bg-primary text-white hover:bg-secondary px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2">
+<span>Order Now</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group bg-surface-light dark:bg-surface-dark rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-800">
+<div class="relative h-64 overflow-hidden">
+<img alt="Rechta Pasta" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWI6UqwrfvBJ6exFq73gdiygbSTn3pZj06IkKyDojUR5D_LhXAvfxnZefEtkFd5kvuqp9208nZaDm-jxb-9EgEUPaGxB0xg_7xNaFffMrwD8owB7mcAwNff_bOGFELuxWih7pYZKyC3TPDyfq9e998l-4iYGKADSpb5mmfeH-Ume_xzg_Dsf0kpy3KOB89lhTZvefnl3B8oHVIvElLveMaHpdml-UndUYbdozGaXlaHLosKSo_63-dvV2VhgcZr7jPi4SGDKIO6sc"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-display text-xl font-bold text-gray-900 dark:text-white group-hover:text-secondary transition-colors">Rechta Algiers</h3>
+<span class="font-display text-lg font-bold text-secondary">$22.00</span>
+</div>
+<p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-2">
+                                Delicate artisanal noodles served with chicken, turnips, and chickpeas in a fragrant white sauce with cinnamon.
+                            </p>
+<div class="flex items-center justify-between mt-4">
+<span class="text-xs text-gray-400 font-medium">Chef's Special</span>
+<button class="bg-primary text-white hover:bg-secondary px-6 py-2 rounded-full text-sm font-medium transition-colors duration-300 flex items-center gap-2">
+<span>Order Now</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<nav class="flex items-center space-x-2">
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">
+<span class="material-icons text-sm">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-primary text-white font-medium">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">3</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-200 dark:border-gray-700 text-gray-500 dark:text-gray-400 hover:bg-primary hover:text-white dark:hover:bg-primary transition-colors">
+<span class="material-icons text-sm">chevron_right</span>
+</button>
+</nav>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+<div class="text-center md:text-left">
+<div class="flex flex-col items-center md:items-start mb-6">
+<span class="text-[10px] tracking-[0.2em] font-bold text-primary dark:text-blue-300 uppercase">Restaurant</span>
+<span class="font-display italic text-3xl text-primary dark:text-blue-300 font-bold leading-none">Le 23</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm mb-6 max-w-xs mx-auto md:mx-0">
+                        Experience the warmth of Algerian hospitality with every bite. Authentic recipes passed down through generations.
+                    </p>
+<div class="flex justify-center md:justify-start space-x-4">
+<a class="text-gray-400 hover:text-secondary transition-colors" href="#"><i class="material-icons">facebook</i></a>
+<a class="text-gray-400 hover:text-secondary transition-colors" href="#"><i class="material-icons">camera_alt</i></a> 
+</div>
+</div>
+<div class="text-center">
+<h4 class="font-display text-lg text-gray-900 dark:text-white mb-6">Quick Links</h4>
+<ul class="space-y-3">
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">Our Story</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">Menu</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">Private Dining</a></li>
+<li><a class="text-sm text-gray-600 dark:text-gray-400 hover:text-secondary dark:hover:text-secondary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="text-center md:text-right">
+<h4 class="font-display text-lg text-gray-900 dark:text-white mb-6">Visit Us</h4>
+<address class="not-italic text-sm text-gray-600 dark:text-gray-400 space-y-3">
+<p>23 Boulevard Zighoud Youcef</p>
+<p>Algiers, Algeria</p>
+<p class="mt-4"><a class="hover:text-secondary transition-colors" href="tel:+21321000000">+213 21 00 00 00</a></p>
+<p><a class="hover:text-secondary transition-colors" href="mailto:contact@le23.dz">contact@le23.dz</a></p>
+</address>
+</div>
+</div>
+<div class="border-t border-gray-200 dark:border-gray-800 pt-8 text-center">
+<p class="text-xs text-gray-400">© 2023 Restaurant Le 23. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+</body></html>
