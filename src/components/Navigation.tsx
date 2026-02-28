@@ -148,6 +148,19 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                                     </span>
                                 )}
                             </button>
+
+                            {/* Language Selectors Desktop */}
+                            <div className="flex items-center space-x-2 border-l border-gray-200 dark:border-gray-700 pl-4 ml-2">
+                                <button className="w-8 h-8 rounded border border-gray-200 dark:border-gray-700 text-[10px] font-bold text-[#081a36] hover:bg-primary hover:text-white dark:text-white dark:hover:bg-primary transition-colors flex items-center justify-center bg-gray-50 dark:bg-gray-800">
+                                    EN
+                                </button>
+                                <button className="w-8 h-8 rounded border border-gray-200 dark:border-gray-700 text-[10px] font-bold text-gray-400 hover:text-[#081a36] hover:border-[#081a36] dark:hover:text-white dark:hover:border-white transition-colors flex items-center justify-center">
+                                    FR
+                                </button>
+                                <button className="w-8 h-8 rounded border border-gray-200 dark:border-gray-700 text-[10px] font-bold text-gray-400 hover:text-[#081a36] hover:border-[#081a36] dark:hover:text-white dark:hover:border-white transition-colors flex items-center justify-center font-arabic">
+                                    AR
+                                </button>
+                            </div>
                         </div>
 
                         <div className="flex sm:hidden items-center relative gap-4">
@@ -226,6 +239,19 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                                 </>
                             )}
                         </button>
+
+                        {/* Language Selectors Mobile */}
+                        <div className="mt-8 flex items-center justify-center gap-4 w-full">
+                            <button className="flex-1 py-3 rounded border border-primary bg-primary text-white text-xs font-bold transition-colors text-center">
+                                English
+                            </button>
+                            <button className="flex-1 py-3 rounded border border-gray-200 dark:border-gray-800 text-gray-500 hover:text-secondary dark:text-gray-400 dark:hover:text-white transition-colors text-xs font-bold text-center">
+                                Français
+                            </button>
+                            <button className="flex-1 py-3 rounded border border-gray-200 dark:border-gray-800 text-gray-500 hover:text-secondary dark:text-gray-400 dark:hover:text-white transition-colors text-xs font-bold font-arabic text-center">
+                                العربية
+                            </button>
+                        </div>
                     </div>
 
                     <div className="p-8 pb-12 w-full text-center bg-gray-50 dark:bg-[#1a1a1a]">
