@@ -140,7 +140,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent group-hover:from-black/60 transition-colors duration-500"></div>
 
-              {}
+              { }
               <button
                 className="absolute right-4 bottom-4 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg text-secondary dark:text-white hover:bg-[#081a36] hover:text-white transition-all duration-300 z-30 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
                 aria-label="Add to cart"
@@ -316,6 +316,34 @@ export default function Home() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" className="py-24 bg-white dark:bg-[#0f172a] border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <span className="text-primary text-xs uppercase tracking-[0.3em] font-bold mb-3 block">
+            Get In Touch
+          </span>
+          <h2 className="text-4xl md:text-5xl font-serif text-[#081a36] dark:text-white mb-12">
+            Contact Us
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-4xl mx-auto">
+            <div className="p-8 border border-gray-100 dark:border-gray-800 rounded shadow-sm bg-gray-50 dark:bg-[#1e293b] hover:-translate-y-2 transition-transform duration-300">
+              <span className="material-symbols-outlined text-4xl text-primary mb-4 block">location_on</span>
+              <h3 className="font-serif text-xl text-[#081a36] dark:text-white mb-2">Location</h3>
+              <p className="text-gray-500 dark:text-gray-400 font-light text-sm">23 Boulevard Zighoud Youcef<br />Algiers, Algeria</p>
+            </div>
+            <div className="p-8 border border-gray-100 dark:border-gray-800 rounded shadow-sm bg-gray-50 dark:bg-[#1e293b] hover:-translate-y-2 transition-transform duration-300">
+              <span className="material-symbols-outlined text-4xl text-primary mb-4 block">call</span>
+              <h3 className="font-serif text-xl text-[#081a36] dark:text-white mb-2">Phone</h3>
+              <p className="text-gray-500 dark:text-gray-400 font-light text-sm">+213 21 00 00 23<br />+213 55 00 00 00</p>
+            </div>
+            <div className="p-8 border border-gray-100 dark:border-gray-800 rounded shadow-sm bg-gray-50 dark:bg-[#1e293b] hover:-translate-y-2 transition-transform duration-300">
+              <span className="material-symbols-outlined text-4xl text-primary mb-4 block">mail</span>
+              <h3 className="font-serif text-xl text-[#081a36] dark:text-white mb-2">Email</h3>
+              <p className="text-gray-500 dark:text-gray-400 font-light text-sm">contact@le23.dz<br />reservations@le23.dz</p>
+            </div>
           </div>
         </div>
       </section>

@@ -51,7 +51,7 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                         </div>
 
                         {/* Desktop Logo */}
-                        <div className="flex-shrink-0 hidden sm:flex items-center">
+                        <div className="flex-shrink-0 hidden sm:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
                             <Link href="/" className="text-center group cursor-pointer relative block">
                                 <div className="text-[10px] tracking-[0.3em] font-bold text-[#081a36] uppercase mb-[-5px] group-hover:text-primary transition-colors text-left pl-1">
                                     Restaurant
@@ -109,7 +109,7 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                             </Link>
                             <Link
                                 className="relative text-[13px] uppercase tracking-widest text-[#081a36] hover:text-primary transition-colors group font-bold"
-                                href="#"
+                                href="/#contact"
                             >
                                 Contact
                                 <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full duration-300"></span>
@@ -236,7 +236,7 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                         >
                             <span className="flex items-center justify-center gap-2">
                                 <span className="material-symbols-outlined">shopping_cart_checkout</span>
-                                Start New Order
+                                Order Now
                             </span>
                         </Link>
                     </div>
