@@ -51,9 +51,9 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                         </div>
 
                         {/* Desktop Logo */}
-                        <div className="flex-shrink-0 hidden sm:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2">
-                            <Link href="/" className="text-center group cursor-pointer relative block">
-                                <div className="text-[10px] tracking-[0.3em] font-bold text-[#081a36] uppercase mb-[-5px] group-hover:text-primary transition-colors text-left pl-1">
+                        <div className="flex-shrink-0 hidden sm:flex flex-1 justify-center items-center absolute left-1/2 transform -translate-x-1/2">
+                            <Link href="/" className="text-center group cursor-pointer block">
+                                <div className="text-[10px] tracking-[0.3em] font-bold text-[#081a36] uppercase mb-[-5px] group-hover:text-primary transition-colors text-center pl-1">
                                     Restaurant
                                 </div>
                                 <div className="flex items-baseline justify-center">
@@ -85,7 +85,7 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                         </div>
 
                         {/* Desktop Nav Links */}
-                        <div className="hidden sm:flex space-x-10 items-center mx-auto">
+                        <div className="hidden sm:flex space-x-6 lg:space-x-10 items-center flex-1">
                             <Link
                                 className="relative text-[13px] uppercase tracking-widest text-[#081a36] hover:text-primary transition-colors group font-bold"
                                 href="/menu-shop"
@@ -117,7 +117,7 @@ export default function Navigation({ isTransparent = true }: { isTransparent?: b
                         </div>
 
                         {/* Desktop Actions */}
-                        <div className="hidden sm:flex items-center space-x-6">
+                        <div className="hidden sm:flex items-center space-x-4 lg:space-x-6 flex-1 justify-end">
                             <button
                                 className="text-[#081a36] hover:text-primary transition-colors p-1"
                                 aria-label="Search"
