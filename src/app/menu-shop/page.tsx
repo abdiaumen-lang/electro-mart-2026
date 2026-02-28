@@ -153,7 +153,7 @@ export default function MenuShop() {
                                                     {item.name}
                                                 </h3>
                                                 <span className="font-serif text-lg font-bold text-secondary">
-                                                    ${Number(item.price).toFixed(2)}
+                                                    {Number(item.price).toFixed(0)} DA
                                                 </span>
                                             </div>
                                             <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed line-clamp-3 flex-grow">

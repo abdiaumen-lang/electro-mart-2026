@@ -130,7 +130,7 @@ export default function Home() {
             <div className="relative overflow-hidden h-[450px]">
               <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-sm">
                 <span className="text-secondary dark:text-white font-serif font-bold text-lg">
-                  $38
+                  3800 DA
                 </span>
               </div>
               <img
@@ -161,7 +161,7 @@ export default function Home() {
             <div className="relative overflow-hidden h-[450px]">
               <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-sm">
                 <span className="text-secondary dark:text-primary font-serif font-bold text-lg">
-                  $32
+                  3200 DA
                 </span>
               </div>
               <img
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="relative overflow-hidden h-[450px]">
               <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-sm">
                 <span className="text-secondary dark:text-primary font-serif font-bold text-lg">
-                  $34
+                  3400 DA
                 </span>
               </div>
               <img
@@ -221,7 +221,7 @@ export default function Home() {
             <div className="relative overflow-hidden h-[450px]">
               <div className="absolute top-4 right-4 z-20 bg-white/90 dark:bg-black/80 backdrop-blur px-3 py-1 rounded-sm">
                 <span className="text-secondary dark:text-primary font-serif font-bold text-lg">
-                  $36
+                  3600 DA
                 </span>
               </div>
               <img
